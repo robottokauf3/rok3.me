@@ -12,6 +12,9 @@ build:
 build-prod:
 	$(SASS_BASE_COMMAND) --style compressed --sourcemap=none
 
+lint:
+	scss-lint $(SASS_DIR) --exclude=$(SASS_DIR)vendor/**
+
 watch:
 	$(SASS_BASE_COMMAND) --watch --style expanded
 
