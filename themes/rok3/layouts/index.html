@@ -1,3 +1,13 @@
-{{ partial "header.html"}}
-{{ partial "sidebar.html"}}
-{{ partial "footer.html"}}
+  {{ partial "header.html" . }}
+  {{ partial "sidebar.html" . }}
+
+  <div id="content" class="content">
+    {{ range .Data.Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+      </li>
+    {{ end }}
+  </div>
+
+  {{ partial "footer.html" . }}

@@ -1,1 +1,7 @@
-SINGLE
+  {{ partial "header.html" . }}
+  {{ partial "sidebar.html" . }}
+  <div id="content" class="content">
+    {{ .Title }}
+    {{ .Content }}
+  </div>
+  {{ partial "footer.html" . }}

@@ -1,0 +1,13 @@
+#sidebar {
+  border: 1px solid #1f201b;
+  bottom: 0;
+  position: fixed;
+  top: 0;
+  width: $sidebar-width;
+
+  @include media($mobile) {
+    position: relative;
+    width: 100%;
+  }
+}
+
