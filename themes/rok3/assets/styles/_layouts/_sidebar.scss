@@ -1,6 +1,7 @@
 #sidebar {
-  border: 1px solid #1f201b;
+  background-color: $sidebar-background-color;
   bottom: 0;
+  color: $sidebar-text-color;
   position: fixed;
   top: 0;
   width: $sidebar-width;
