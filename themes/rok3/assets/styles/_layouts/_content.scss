@@ -1,7 +1,11 @@
-#content {
-  margin-left: $sidebar-width;
+.content {
+  @include span-columns(9);
+
+  padding-left: $padding-h;
 
   @include media($mobile) {
-    margin-left: 0;
+    @include span-columns(12);
+
+    padding: 0 $padding-h;
   }
 }

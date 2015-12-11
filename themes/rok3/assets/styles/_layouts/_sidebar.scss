@@ -1,14 +1,8 @@
-#sidebar {
-  background-color: $sidebar-background-color;
-  bottom: 0;
-  color: $sidebar-text-color;
-  position: fixed;
-  top: 0;
-  width: $sidebar-width;
+.sidebar {
+  @include span-columns(3);
 
   @include media($mobile) {
-    position: relative;
-    width: 100%;
+    @include span-columns(12);
   }
 }
 

@@ -1,0 +1,12 @@
+.nav {
+  background-color: #f8f8f9;
+  border-bottom: 6px solid $highlight-main;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &--container {
+    @include outer-container;
+  }
+}

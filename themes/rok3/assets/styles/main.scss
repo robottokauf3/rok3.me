@@ -7,8 +7,8 @@
 
 // Main
 @import '_base/text';
+@import '_layouts/nav';
+@import '_layouts/page';
 @import '_layouts/sidebar';
-@import '_modules/sidebar';
-
 @import '_layouts/content';
-@import '_modules/content';
+@import '_layouts/footer';

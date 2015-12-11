@@ -1,5 +1,7 @@
 // Layout
-$sidebar-width: 330px;
+$max-width: 1380px;
+$nav-height: 55px;
+$padding-h: 20px;
 
 // Media Queries
 $mobile: max-width 768px;
@@ -9,5 +11,7 @@ $font-main: 'Roboto';
 $font-mono: 'Inconsolata';
 
 // Colors
+$highlight-main: #53a1b8;
 $sidebar-background-color: #1f201b;
 $sidebar-text-color: #fff;
+$link-color: #53a1b8;
