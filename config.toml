@@ -6,3 +6,24 @@ theme = "rok3"
 [params]
   google_analtyics = ""
   description = "TEST META DESCRIPTION"
+
+[[menu.main]]
+    name = "Home"
+    weight = -50
+    url = "/"
+[[menu.main]]
+    name = "Programming"
+    weight = -40
+    url = "/"
+[[menu.main]]
+    name = "Electronics"
+    weight = -30
+    url = "/"
+[[menu.main]]
+    name = "Photography"
+    weight = -20
+    url = "/"
+[[menu.main]]
+    name = "About Rob"
+    weight = -10
+    url = "/"
