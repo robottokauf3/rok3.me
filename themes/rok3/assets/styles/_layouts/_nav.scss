@@ -1,48 +1,62 @@
+$nav-background-color: #f8f8f9;
+
 .nav {
-  background-color: #f8f8f9;
+  background-color: $nav-background-color;
   border-bottom: 7px solid $highlight-main;
   font-size: 1.125em;
   position: fixed;
   top: 0;
   width: 100%;
+}
 
-  &__container {
-    @include outer-container;
+.nav__container {
+  @include outer-container;
 
-    margin-bottom: 0;  
-    margin-top: 0;  
-    padding: 0 $padding-h;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0 $padding-h;
+}
+
+.nav__item {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+
+.nav__link {
+  @include transition(all ease .25s);
+
+  display: block;
+  padding: .844em 1.3em;
+  text-decoration: none;
+
+  &::before {
+    @include transform(scaleY(0));
+    @include transform-origin(50% 100%);
+    @include transition-property(transform);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+
+    background: $highlight-main;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 
-  &__item {
-    float: left;
-    list-style: none;
-    position: relative;
+  &.active::before {
+    @include transform(scaleY(.1));
   }
 
-  &__link {
-    @include transition(all ease 0.25s);
+  &:hover {
+    color: $nav-background-color;
 
-    display: block;
-    padding: .844em 1.3em;
-    text-decoration: none;
-
-    &:hover {
-      color: #fff;
-      background-color: $highlight-main;
+    &::before {
+      @include transform(scaleY(1));
     }
-
-    &.active:before {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      margin-left: -0.563em;
-      color: $highlight-main;
-      border: 0.563em solid $highlight-main;
-      border-color: transparent transparent $highlight-main transparent;
-    }
-
   }
 }
+
