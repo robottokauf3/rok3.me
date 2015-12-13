@@ -2,8 +2,15 @@ $archive-heading-color: #444854;
 $list-icon-color: #666a76;
 
 .archive {
+  margin-bottom: 25px;
+
   &-heading {
     color: $archive-heading-color;
+    margin: 0;
+  }
+
+  &-list {
+    margin-top: 5px;
   }
 
   &-icon {

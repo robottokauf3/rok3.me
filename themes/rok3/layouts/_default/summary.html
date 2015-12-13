@@ -1,6 +1,6 @@
 <article class="post">
-  <header>
-    <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+  <header class="post-header">
+    <div><i class="fa fa-calendar-o post-date-icon"></i><a href="{{ .Permalink }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</a></div>
     <h2 class="post-heading"><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
   </header>
 

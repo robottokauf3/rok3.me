@@ -1,8 +1,14 @@
   {{ partial "header.html" . }}
-  {{ partial "sidebar.html" . }}
-  <div id="content" class="content">
-    <div>{{ .Date.Format "January 2, 2006" }}</div>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+  <div class="page">
+    <div class="content">
+      <article class="post">
+        <header class="post-header">
+          <div><i class="fa fa-calendar-o post-date-icon"></i><a href="{{ .Permalink }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</a></div>
+          <h1 class="post-heading"><a href='{{ .Permalink }}'> {{ .Title }}</a></h1>
+        </header>
+        {{ .Content }}
+      </article>
+    </div>
+    {{ partial "sidebar.html" . }}
   </div>
   {{ partial "footer.html" . }}
