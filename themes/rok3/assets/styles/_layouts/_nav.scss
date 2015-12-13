@@ -1,12 +1,48 @@
 .nav {
   background-color: #f8f8f9;
-  border-bottom: 6px solid $highlight-main;
-  height: $nav-height;
+  border-bottom: 7px solid $highlight-main;
+  font-size: 1.125em;
   position: fixed;
   top: 0;
   width: 100%;
 
-  &--container {
+  &__container {
     @include outer-container;
+
+    margin-bottom: 0;  
+    margin-top: 0;  
+    padding: 0 $padding-h;
+  }
+
+  &__item {
+    float: left;
+    list-style: none;
+    position: relative;
+  }
+
+  &__link {
+    @include transition(all ease 0.25s);
+
+    display: block;
+    padding: .844em 1.3em;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      background-color: $highlight-main;
+    }
+
+    &.active:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -0.563em;
+      color: $highlight-main;
+      border: 0.563em solid $highlight-main;
+      border-color: transparent transparent $highlight-main transparent;
+    }
+
   }
 }

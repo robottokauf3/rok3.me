@@ -9,17 +9,17 @@
     <link rel="canonical" href="{{ .Permalink }}"/>
     {{ .Hugo.Generator }}
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/main.css"/>
   </head>
   <body>
     <div class="nav">
-      <div class="nav--container">
-        <ul>
-          {{ $currentNode := . }}
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Pre }}<span>{{ .Name }}</span></a></li>
-          {{ end }}
-        </ul>
-      </div>
+      <ul class="nav__container">
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+        <li class="nav__item">
+          <a href="{{ .URL }}" class="nav__link{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }}<span>{{ .Name }}</span></a>
+        </li>
+        {{ end }}
+      </ul>
     </div>
