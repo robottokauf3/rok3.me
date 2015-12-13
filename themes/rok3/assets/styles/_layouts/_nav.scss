@@ -7,9 +7,10 @@ $nav-background-color: #f8f8f9;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
-.nav__container {
+.nav-container {
   @include outer-container;
 
   margin-bottom: 0;
@@ -17,18 +18,17 @@ $nav-background-color: #f8f8f9;
   padding: 0 $padding-h;
 }
 
-.nav__item {
+.nav-item {
   float: left;
   list-style: none;
   position: relative;
 }
 
-.nav__link {
+.nav-link {
   @include transition(all ease .25s);
 
   display: block;
   padding: .844em 1.3em;
-  text-decoration: none;
 
   &::before {
     @include transform(scaleY(0));

@@ -1,8 +1,7 @@
 <article class="post">
   <header>
     <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
-    <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+    <h2 class="post-heading"><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
   </header>
 
   {{ .Summary }}

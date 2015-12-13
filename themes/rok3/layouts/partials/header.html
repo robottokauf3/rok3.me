@@ -10,15 +10,16 @@
     {{ .Hugo.Generator }}
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css"/>
   </head>
   <body>
     <div class="nav">
-      <ul class="nav__container">
+      <ul class="nav-container">
         {{ $currentNode := . }}
         {{ range .Site.Menus.main }}
-        <li class="nav__item">
-          <a href="{{ .URL }}" class="nav__link{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }}<span>{{ .Name }}</span></a>
+        <li class="nav-item">
+          <a href="{{ .URL }}" class="nav-link{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }}<span>{{ .Name }}</span></a>
         </li>
         {{ end }}
       </ul>

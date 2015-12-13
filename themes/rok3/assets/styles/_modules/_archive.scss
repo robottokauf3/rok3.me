@@ -1,16 +1,12 @@
+$archive-heading-color: #444854;
+$list-icon-color: #666a76;
+
 .archive {
-
-  &--heading {
-    color: #444854;
+  &-heading {
+    color: $archive-heading-color;
   }
 
-  &--list {
-    list-style: none;
-  }
-
-  &--item {
-  }
-
-  &--link {
+  &-icon {
+    color: $list-icon-color;
   }
 }

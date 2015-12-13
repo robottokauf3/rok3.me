@@ -1,3 +1,35 @@
 <div class="sidebar">
-  Sidebar
+  <div class="archive">
+    <h3 class="archive-heading">Recent Posts</h3>
+    <ul class="archive-list fa-ul">
+      {{ range first .Site.Params.sidebar.recentPosts .Site.Pages }}
+      <li class="archive-item">
+        <i class="fa fa-li fa-file-o archive-icon"></i><a class="archive-link" href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="archive">
+    <h3 class="archive-heading">Categories</h3>
+    <ul class="archive-list fa-ul">
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <li class="archive-item">
+          <i class="fa fa-li fa-file-o archive-icon"></i><a class="archive-link" href="/categories/{{ $name | urlize }}">{{ $name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+
+  <div class="archive">
+    <h3 class="archive-heading">tags</h3>
+    <ul class="archive-list fa-ul">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <li class="archive-item">
+          <i class="fa fa-li fa-file-o archive-icon"></i><a class="archive-link" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 </div>
