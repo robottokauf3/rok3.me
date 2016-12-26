@@ -13,6 +13,11 @@ staticDir = "static"
     socialAppearAtTop    = true
     socialAppearAtBottom = true
 
+    viewMorePostLink     = "/blog/"
+
+    categoriesByCount    = true
+    includeReadingTime   = true
+
 [params.intro]
     header    = "Robert Kaufmann III"
     paragraph = "Software Engineer.  Photographer. Ninja."
@@ -29,31 +34,31 @@ staticDir = "static"
 
 [[menu.main]]
     name = "Blog"
-    url = "/blog"
+    url = "/blog/"
     identifier = "fa fa-newspaper-o"
     weight = 1
 
 [[menu.main]]
     name = "Programming"
-    url = "/"
+    url = "/categories/programming/"
     identifier = "fa fa-code"
     weight = 2
 
 [[menu.main]]
     name = "Electronics"
-    url = "/"
+    url = "/categories/electronics/"
     identifier = "fa fa-bolt"
     weight = 3
 
 [[menu.main]]
     name = "Photography"
-    url = "/"
+    url = "/photography/"
     identifier = "fa fa-camera"
     weight = 4
 
 [[menu.main]]
     name = "About Rob"
-    url = "/"
+    url = "/about/"
     identifier = "fa fa-user"
     weight = 5
 
