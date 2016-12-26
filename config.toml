@@ -20,8 +20,8 @@ staticDir = "static"
 
 [params.intro]
     header    = "Robert Kaufmann III"
-    paragraph = "Software Engineer.  Photographer. Ninja."
-    about     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+    paragraph = "Software Engineer. Cyclist. Photographer. Ninja."
+    about     = ""
 
 [params.intro.pic]
     src       = "/img/profile.jpg"
