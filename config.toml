@@ -1,29 +1,87 @@
 baseurl = "http://rok3.me/"
 languageCode = "en-us"
 title = "Rob's Programming Adventures"
-theme = "rok3"
+theme = "hugo-future-imperfect"
+staticDir = "static"
 
 [params]
-  google_analtyics = ""
-  description = "TEST META DESCRIPTION"
+    # Sets the meta tag description, usually reserved for the main page
+    description          = "Rob's programming adventures."
+    # This will appear on the top left of the navigation bar
+    navbarTitle          = "Robert Kaufmann III"
+    # Social media buttons that appear on the sidebar
+    socialAppearAtTop    = true
+    socialAppearAtBottom = true
+
+[params.intro]
+    header    = "Robert Kaufmann III"
+    paragraph = "Software Engineer.  Photographer. Ninja."
+    about     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+
+[params.intro.pic]
+    src       = "/img/profile.jpg"
+    # modify your picture in the shape of a circle or
+    # future imperfect's hexagonal shape
+    circle    = false
+    imperfect = true
+    width     = ""
+    alt       = "Hugo Future Imperfect"
 
 [[menu.main]]
-    name = "Home"
-    weight = -50
-    url = "/"
+    name = "Blog"
+    url = "/blog"
+    identifier = "fa fa-newspaper-o"
+    weight = 1
+
 [[menu.main]]
     name = "Programming"
-    weight = -40
     url = "/"
+    identifier = "fa fa-code"
+    weight = 2
+
 [[menu.main]]
     name = "Electronics"
-    weight = -30
     url = "/"
+    identifier = "fa fa-bolt"
+    weight = 3
+
 [[menu.main]]
     name = "Photography"
-    weight = -20
     url = "/"
+    identifier = "fa fa-camera"
+    weight = 4
+
 [[menu.main]]
     name = "About Rob"
-    weight = -10
     url = "/"
+    identifier = "fa fa-user"
+    weight = 5
+
+[social]
+    github          = "robottokauf3"
+    twitter         = "rok3"
+    linkedin        = "robkaufmann"
+    # jsfiddle        = ""
+    # codepen         = ""
+    # foursquare      = ""
+    # dribbble        = ""
+    # deviantart      = ""
+    # behance         = ""
+    # flickr          = ""
+    # instagram       = ""
+    # youtube         = ""
+    # vimeo           = ""
+    # vine            = ""
+    # medium          = ""
+    # wordpress       = ""
+    # tumblr          = ""
+    # xing            = ""
+    # slideshare      = ""
+    # stackoverflow   = ""
+    # reddit          = ""
+    # pinterest       = ""
+    # googleplus      = ""
+    # facebook        = ""
+    # facebook_admin  = ""
+    # twitter_domain  = ""
+    # email           = ""
