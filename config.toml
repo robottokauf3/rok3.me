@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Rob's Programming Adventures"
 theme = "hugo-future-imperfect"
 staticDir = "static"
+disqusShortname = "rok3"
+googleAnalytics = "UA-37764759-1"
+enableRobotsTXT = true
+
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
@@ -17,11 +21,20 @@ staticDir = "static"
 
     categoriesByCount    = true
     includeReadingTime   = true
+    highlightjsCDN       = "https://cdnjs.cloudflare.com/ajax/libs"
+    highlightjsVersion   = "9.12.0"
+    highlightjsTheme     = "atom-one-dark"
+    socialShareTwitter   = true
+    socialShareGoogleplus = true
+    socialShareFacebook  = true
+    socialShareReddit    = true
+    socialShareLinkedin  = true
+    socialShareEmail     = true
 
 [params.intro]
     header    = "Robert Kaufmann III"
     paragraph = "Software Engineer. Cyclist. Photographer. Ninja."
-    about     = ""
+    about     = "About text"
 
 [params.intro.pic]
     src       = "/img/profile.jpg"
