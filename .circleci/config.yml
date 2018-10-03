@@ -2,12 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: cibuilds/hugo:latest
+    working_directory: /hugo
+    environment:
+      HUGO_BUILD_DIR: /hugo/public
     steps:
+      - run: apk update && apk add git
       - checkout
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: git submodule sync && git submodule update --init
+      - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.0.1/s3deploy_2.0.1_Linux-64bit.tar.gz | tar xvz
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
