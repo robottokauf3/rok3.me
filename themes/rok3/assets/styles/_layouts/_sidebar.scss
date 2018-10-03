@@ -1,8 +1,0 @@
-.sidebar {
-  @include span-columns(3);
-
-  @include media($mobile) {
-    @include span-columns(12);
-  }
-}
-
