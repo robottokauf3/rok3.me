@@ -6,6 +6,7 @@ staticDir = "static"
 disqusShortname = "rok3"
 googleAnalytics = "UA-37764759-1"
 enableRobotsTXT = true
+canonifyURLs = true
 
 
 [params]
@@ -33,8 +34,8 @@ enableRobotsTXT = true
 
 [params.intro]
     header    = "Robert Kaufmann III"
-    paragraph = "Software Engineer. Cyclist. Photographer. Ninja."
-    about     = "About text"
+    paragraph = "Software Engineer. Cyclist. Photographer."
+    about     = "<a href=\"/robert-kaufmann-resume.pdf\">Resume</a>"
 
 [params.intro.pic]
     src       = "/img/profile.jpg"
@@ -52,14 +53,8 @@ enableRobotsTXT = true
     weight = 1
 
 [[menu.main]]
-    name = "Programming"
-    url = "/categories/programming/"
-    identifier = "fa fa-code"
-    weight = 2
-
-[[menu.main]]
-    name = "Electronics"
-    url = "/categories/electronics/"
+    name = "Projects"
+    url = "/projects/"
     identifier = "fa fa-bolt"
     weight = 3
 
