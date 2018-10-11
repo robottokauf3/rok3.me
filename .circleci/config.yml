@@ -6,9 +6,20 @@ jobs:
     working_directory: /hugo
     environment:
       HUGO_BUILD_DIR: /hugo/public
+      REGION: us-east-1
+      BUCKET: rok3.me
     steps:
       - run: apk update && apk add git
       - checkout
       - run: git submodule sync && git submodule update --init
-      - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.0.1/s3deploy_2.0.1_Linux-64bit.tar.gz | tar xvz
+      - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.3.0/s3deploy_2.3.0_Linux-64bit.tar.gz | tar xvz
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external --url-ignore=/mailto/ 
+      - deploy:
+          name: deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              ./s3deploy -source=$HUGO_BUILD_DIR -region=$REGION -bucket=$BUCKET -distribution-id=$DISTRIBUTION_ID
+            else
+              echo "Not master branch, dry run only"
+            fi
