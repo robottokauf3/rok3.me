@@ -169,9 +169,11 @@ _I keep a copy of this in this in a folder with other Elixir-specific configurat
             "problemMatcher": [
                 "$mixCompileError",
                 "$mixCompileWarning",
+                "$mixTestFailure"
+            ]
         },
         {
-            "taskName": "Add Saved Test",
+            "label": "Add Saved Test",
             "group": "test",
             "type": "shell",
             "command": "echo -n ${relativeFile}:${lineNumber} > ${workspaceRoot}/.vscode/STORED_TEST",
@@ -183,7 +185,7 @@ _I keep a copy of this in this in a folder with other Elixir-specific configurat
             }
         },
         {
-            "taskName": "Add Saved File Test",
+            "label": "Add Saved File Test",
             "group": "test",
             "type": "shell",
             "command": "echo -n ${relativeFile} > ${workspaceRoot}/.vscode/STORED_TEST",
@@ -195,7 +197,7 @@ _I keep a copy of this in this in a folder with other Elixir-specific configurat
             }
         },
         {
-            "taskName": "Delete Saved Test",
+            "label": "Delete Saved Test",
             "group": "test",
             "type": "shell",
             "command": "rm ${workspaceRoot}/.vscode/STORED_TEST",
@@ -207,7 +209,7 @@ _I keep a copy of this in this in a folder with other Elixir-specific configurat
             }
         },
         {
-            "taskName": "Run Saved Test",
+            "label": "Run Saved Test",
             "command": "mix test $(cat ${workspaceRoot}/.vscode/STORED_TEST)",
             "type": "shell",
             "group": "test",
